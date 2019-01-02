@@ -14,7 +14,7 @@ namespace osuTK.Input
         public string FileName
         {
             get;
-            internal set;
+            set;
         }
     }
 }
