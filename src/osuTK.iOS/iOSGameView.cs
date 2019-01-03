@@ -713,13 +713,13 @@ namespace osuTK.iOS
         }
 
 
-        private readonly FileDropEventArgs FileDropArgs = new FileDropEventArgs();
         public void OnFileDrop(string s)
         {
-            Console.WriteLine("Importing " + s);
-            var e = FileDropArgs;
-            FileDropArgs.FileName = s;
+            
+            var e = new FileDropEventArgs();
+            e.FileName = s;
             FileDrop(this, e);
+            
         }
 
         public virtual void MakeCurrent()
@@ -963,7 +963,6 @@ namespace osuTK.iOS
         protected virtual void OnRenderFrame(FrameEventArgs e) => RenderFrame?.Invoke(this, e);
 
        
-       
 
         public Point PointToClient(Point point) => point;
         public Point PointToScreen(Point point) => point;
@@ -989,7 +988,6 @@ namespace osuTK.iOS
         public event EventHandler<MouseMoveEventArgs> MouseMove;
         public event EventHandler<MouseWheelEventArgs> MouseWheel;
         public event EventHandler<FileDropEventArgs> FileDrop;
-
 
         public event EventHandler<EventArgs> Load;
         public event EventHandler<EventArgs> Unload;
