@@ -715,11 +715,9 @@ namespace osuTK.iOS
 
         public void OnFileDrop(string s)
         {
-            
             var e = new FileDropEventArgs();
             e.FileName = s;
             FileDrop(this, e);
-            
         }
 
         public virtual void MakeCurrent()
@@ -962,7 +960,6 @@ namespace osuTK.iOS
 
         protected virtual void OnRenderFrame(FrameEventArgs e) => RenderFrame?.Invoke(this, e);
 
-       
 
         public Point PointToClient(Point point) => point;
         public Point PointToScreen(Point point) => point;
