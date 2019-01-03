@@ -988,7 +988,7 @@ namespace osuTK.iOS
         public event EventHandler<MouseButtonEventArgs> MouseUp;
         public event EventHandler<MouseMoveEventArgs> MouseMove;
         public event EventHandler<MouseWheelEventArgs> MouseWheel;
-        public event EventHandler<FileDropEventArgs> FileDrop = delegate { };
+        public event EventHandler<FileDropEventArgs> FileDrop;
 
 
         public event EventHandler<EventArgs> Load;
