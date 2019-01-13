@@ -956,6 +956,12 @@ namespace osuTK.iOS
             h?.Invoke(this, e);
         }
 
+        internal void OnFileDrop(string s)
+        {
+            var e = new FileDropEventArgs(s);
+            FileDrop(this, e);
+        }
+
         protected virtual void OnUpdateFrame(FrameEventArgs e) => UpdateFrame?.Invoke(this, e);
 
         protected virtual void OnRenderFrame(FrameEventArgs e) => RenderFrame?.Invoke(this, e);

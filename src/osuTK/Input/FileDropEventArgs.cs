@@ -7,6 +7,11 @@ namespace osuTK.Input
     /// </summary>
     public class FileDropEventArgs : EventArgs
     {
+        public FileDropEventArgs(string fileName = null)
+        {
+            FileName = fileName;
+        }
+
         /// <summary>
         /// Gets the name of the file.
         /// </summary>
